@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Confirm, Prompt Box </title>
+
+    <script>
+        function p1()
+        {
+            alert("This is alert popup example");
+        }
+
+        function p2()
+        {
+            var r= confirm("Your response is Submitted");
+
+            if(r==true)
+            {
+                alert("Thank you");
+
+            }
+            else
+            {
+                alert("Try agian");
+            }
+        }
+
+        function p3()
+        {
+            var name=prompt("please enter your name","A ");
+            if(name!=null && name!="")
+            {
+                document.write("Hello," + " " + name + " " + "How Are You?");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2> Alert Box </h2><br>
+    <button onclick="p1()"> Alert</button><br><br>
+
+    <h2> Confirm Box </h2><br>
+    <button onclick="p2()"> Confirm</button><br><br>
+
+    <h2> Prompt Box </h2><br>
+    <button onclick="p3()"> prompt </button>
+</body>
+</html>

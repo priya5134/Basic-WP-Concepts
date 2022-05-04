@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head> 
+	<meta charset ="utf-8">
+	<title> DATE AND TIME </title>
+	</head>
+	<body>
+
+	<h1 id=day> </h1>
+	<h2 id=time> </h2>
+	<script type="text/javascript">
+	var today = new Date();
+	var day = today.getDay();
+	var daylist = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+	document.getElementById("day").innerHTML=("Today is : " + daylist[day] + ".");
+	var hour = today.getHours();
+	var minute = today.getMinutes();
+	var second = today.getSeconds();
+	var prepand = (hour >= 12)? " PM ":" AM ";
+	hour = (hour >= 12)? hour - 12: hour;
+	if (hour===0 && second ===0)
+	{
+		if (minute===0 && second===0)
+		{
+			hour=12;
+			prepand='Noon';
+		
+		}
+		else
+		{
+		hour=12;
+		prepand='PM';
+
+		}
+	}
+if (hour===0 && prepand ===0)
+	{
+		if (minute===0 && second===0)
+		{
+			hour=12;
+			prepand='Midnight';
+		
+		}
+		else
+		{
+		hour=12;
+		prepand='AM';
+
+		}
+	}
+	document.getElementById("time").innerHTML=("Current Time : "+hour + prepand + ":" + minute + ":" + second);
+
+</script>
+</body>
+</html>
